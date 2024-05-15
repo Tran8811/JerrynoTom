@@ -41,6 +41,8 @@ Ngô Thị Tâm - 23020568
 - Data Structures: Pointers, arrays, structures, classes, and random number generation.
 - Collision Handling and Speed Increase: Implemented to enhance gameplay dynamics (speed increases every 10 seconds).
 
+## Installation: [here](https://drive.google.com/drive/folders/1pCqoopNQGSgkD4lf6aCV4uBs4E9CZjW4?usp=sharing)
+
 ## References:
 - [Lazy Foo](https://lazyfoo.net/tutorials/SDL)
 - [theTruth777 MenuCPP(menu game)](https://github.com/theTruth777/MenuCPP)
