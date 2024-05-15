@@ -17,7 +17,7 @@ using namespace std;
 int main(int argc, char *argv[]) {
     bool quit = false;
     SDL_Event event;
-
+//Tao cua so moi cho menu
     EngineWindow appWindow;
     appWindow.createWindow("Menu Demonstration", 800, 600);
 
@@ -35,7 +35,7 @@ int main(int argc, char *argv[]) {
         }
         if (event.type == SDL_KEYDOWN) {
             if (event.key.keysym.sym == SDLK_RETURN || event.key.keysym.sym == SDLK_KP_ENTER) {
-                enterPressed = true; // Danh dau enter da duoc nhannhan
+                enterPressed = true; // Danh dau enter da duoc nhan
             }
         }
 
