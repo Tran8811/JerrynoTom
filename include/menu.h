@@ -11,6 +11,7 @@ using namespace std;
 
 class EngineMenu {
 public:
+//Initializes SDL_ttf, sets up the renderer and window, and retrieves the window dimensions
     EngineMenu(SDL_Renderer *windowsplashFontRenderer, SDL_Window *window) {
         TTF_Init();
         splashFontRenderer = windowsplashFontRenderer;
@@ -18,7 +19,7 @@ public:
         splashScreenTextBlink = 0;
         SDL_GetWindowSize(window, &windowWidth, &windowHeight);
     }
-
+//Initializes the splash screen with the game title, display text, font, and optionally a background image.
     void initSplashScreen(const char *displayName, const char *gameName, const char *fontFamily, const char *backgroundImg = NULL) {
         gameTitle = gameName; // Lưu trữ tên trò chơi
         splashText = displayName;
@@ -45,7 +46,7 @@ private:
     int windowHeight, windowWidth, splashScreenTextBlink;
 
     std::string gameTitle; // Thêm biến gameTitle
-
+//Tải phông chữ và tùy chọn một hình nền.
     void prepareSplashScreen(const char *fontFamily, const char *backgroundImg) {
         splashFont = TTF_OpenFont(fontFamily, 25);
 
@@ -55,7 +56,7 @@ private:
             splashImageTexture = SDL_CreateTextureFromSurface(splashFontRenderer, splashBackgroundSurface);
         }
     }
-
+//Hiển thị chữ với hiệu ứng nhấp 
     void renderSplashScreenText() {
         int textWidth = 0;
         int textHeight = 0;
