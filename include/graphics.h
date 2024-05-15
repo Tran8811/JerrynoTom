@@ -17,6 +17,7 @@ struct Graphics {
     }
 
 	bool init() {
+	//Khoi tao thu vien SDL.	
     if (SDL_Init(SDL_INIT_EVERYTHING) != 0) {
         logErrorAndExit("SDL_Init", SDL_GetError());
         return false; // Trả về false nếu khởi tạo không thành công
@@ -32,7 +33,7 @@ struct Graphics {
         logErrorAndExit("SDL_image error:", IMG_GetError());
         return false; // Trả về false nếu khởi tạo không thành công
     }
-
+//Create a 2D rendering context for a window.
     renderer = SDL_CreateRenderer(window, -1, SDL_RENDERER_ACCELERATED | SDL_RENDERER_PRESENTVSYNC);
     if (renderer == nullptr) {
         logErrorAndExit("CreateRenderer", SDL_GetError());
