@@ -45,8 +45,6 @@ struct Mouse {
     }
 
     void grow() {
-        rect.h += 2;
-        rect.w += 2;
         speed += 1;
     }
 
